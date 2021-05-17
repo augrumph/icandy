@@ -1,4 +1,6 @@
-
+body{
+    background-color: #111111;
+}
 #conteudo {
     text-align: center;
     font-family: "Segoe UI";
