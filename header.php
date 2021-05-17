@@ -19,7 +19,7 @@
             <a class="menu" href="menuUsuario.php">HOME</a>
             <a class="menu" href="produtos.php">PRODUTOS</a>
             <a class="menu" href="carrinho.php">CARRINHO</a>
-            <a class="menu" href="logout.php">Sair</a>
+            <a class="menu" href="logout.php">SAIR</a>
         </div>
     </div>
 </body>
