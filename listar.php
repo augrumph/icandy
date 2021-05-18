@@ -5,7 +5,7 @@
 </head>
 <body>
     <?php require('./db.php'); ?>
-    <!-- COMEÇO DA HEADER -->
+    
     <div class="panel-footer">
                                 
                 <div class="row">
@@ -23,9 +23,7 @@
                             </thead>
                             <tbody>
                                 <?php
-                                /**
-                                 *  Bloco que realiza o papel do Read - recupera os dados e apresenta na tela
-                                 */
+                                
                                 try {
                                     $stmt = $conexao->prepare("SELECT * FROM employees");
                                     if ($stmt->execute()) {

@@ -3,14 +3,14 @@
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: red;
+  background-color: #f1f1f1;
   position: absolute;
   height: 100%;
 }
 
 .sidebar a {
   display: block;
-  color: red;
+  color: black;
   padding: 16px;
   text-decoration: none;
 }
@@ -21,7 +21,7 @@
 }
 
 .sidebar a:hover:not(.active) {
-  background-color: goldenrod;
+  background-color: #555;
   color: white;
 }
 

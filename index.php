@@ -16,7 +16,7 @@
      <nav>
   <ul>
     <li>
-      <a href="login.php">Usuario</a>
+      <a href="login.php">Cliente</a>
       <span></span><span></span><span></span><span></span>
     </li>
     <li>

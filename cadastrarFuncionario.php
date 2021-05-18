@@ -19,7 +19,7 @@
                             <div class="titulo-cad">
                                 <H1 class="titulo-cad">Cadastro Funcionario: </H1>
                                 <input type="hidden" name="id" value="<?php
-                                // Preenche o id no campo id com um valor "value"
+                                
                                 echo (isset($id) && ($id != null || $id != "")) ? $id : '';
 
                                 ?>" />
@@ -27,7 +27,7 @@
                                     <label for='nome' class="col-sm-1 control-label" ></label>
                                     <div class="col-md-5">
                                         <input class="input" type="text" name='nome' placeholder="Nome" value="<?php
-                                        // Preenche o nome no campo empresa com um valor "value"
+                                        
                                         echo (isset($nome) && ($nome!= null || $nome != "")) ? $nome : '';
 
                                         ?>" class="form-control"/>
@@ -35,7 +35,7 @@
                                     <label for="sobrenome" class="col-sm-1 control-label"></label>
                                     <div class="col-md-4">
                                         <input class="input" type="text" name="sobrenome" placeholder="Sobrenome" value="<?php
-                                        // Preenche o servico no campo contato com um valor "value"
+                                        
                                         echo (isset($sobrenome) && ($sobrenome != null || $sobrenome != "")) ? $sobrenome : '';
 
                                         ?>" class="form-control" />
@@ -45,8 +45,10 @@
                                 <div class="form-group">
                                     <label for="inicio_contrato" class="col-sm-1 control-label"></label>
                                     <div class="col-md-4">
-                                        <input class="datanasc" type="date" name="inicio_contrato"  value="<?php
-                                        // Preenche o email no campo contato com um valor "value"
+                                        
+                                        <span> </span>
+                                        <input placeholder="Inicio Contrato" onfocus="(this.type='date')" class="datanasc"  name="inicio_contrato"  value="<?php
+                                        
                                         echo (isset($inicio_contrato) && ($inicio_contrato != null || $inicio_contrato != "")) ? $inicio_contrato : '';
 
                                         ?>" class="form-control" />
@@ -54,7 +56,7 @@
                                     <label for="genero" class="col-sm-2 control-label"></label>
                                     <div class="col-md-4">
                                         <input class="input" type="text" name="genero" placeholder="Genero" value="<?php
-                                        // Preenche o email no campo funcao com um valor "value"
+                                       
                                         echo (isset($genero) && ($genero != null || $genero != "")) ? $genero : '';
 
                                         ?>" class="form-control" />
@@ -64,8 +66,7 @@
                                     <label for="salario" class="col-sm-1 control-label"></label>
                                     <div class="col-md-4">
                                         <input class="input" type="text" name="salario" placeholder="Salario" value="<?php
-                                        // Preenche o celular no campo email com um valor "value"
-
+                                       
                                         echo (isset($salario) && ($salario != null || $salario != "")) ? $salario : '';
 
                                         ?>" class="form-control" />
@@ -73,7 +74,7 @@
                                     <label for="posicao" class="col-sm-2 control-label"></label>
                                     <div class="col-md-2">
                                         <input class="input" type="text" name="posicao" placeholder="Cargo" value="<?php
-                                        // Preenche o celular no campo telefone com um valor "value"
+                                        
                                         echo (isset($posicao) && ($posicao != null || $posicao != "")) ? $posicao : '';
 
                                         ?>" class="form-control" />

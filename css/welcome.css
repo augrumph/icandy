@@ -80,8 +80,7 @@ footer{
 	bottom: 0;
 }
 .footer-distributed{
-  position: a;
-	background-color: rgb(0, 0, 0, 0.7);
+    position: a;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: center;

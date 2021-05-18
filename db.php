@@ -10,20 +10,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $posicao = filter_input(INPUT_POST, 'posicao');
     
 } else if (!isset($id)) {
-// Se não se não foi setado nenhum valor para variável $id
+
     $id = (isset($_GET["id"]) && $_GET["id"] != null) ? $_GET["id"] : "";
 }
  
-// Cria a conexão com o banco de dados
 try {
-    $conexao = new PDO("mysql:host=localhost;dbname=icandy", "root", "AntoBat**7");
+    $conexao = new PDO("mysql:host=localhost;dbname=icandy", "root", "");
     $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conexao->exec("set names utf8");
 } catch (PDOException $erro) {
     echo "<p class=\"bg-danger\">Erro na conexão:" . $erro->getMessage() . "</p>";
 }
 
-// Bloco If que Salva os dados no Banco - atua como Create e Update
+
 if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "save" && $nome != "") {
     try {
         if ($id != "") {
@@ -60,7 +59,6 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "save" && $nome != "") {
     }
 }
 
-// Bloco if que recupera as informações no formulário, etapa utilizada pelo Update
 if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "upd" && $id != "") {
     try {
         $stmt = $conexao->prepare("SELECT * FROM employees WHERE id = ?");
@@ -83,7 +81,6 @@ if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "upd" && $id != "") {
     }
 }
 
-// Bloco if utilizado pela etapa Delete
 if (isset($_REQUEST["act"]) && $_REQUEST["act"] == "del" && $id  != "") {
     try {
         $stmt = $conexao->prepare("DELETE FROM employees WHERE id = ?");
