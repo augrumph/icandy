@@ -43,7 +43,7 @@ if (isset($_POST['login'])) {
         <form action="sidenav.php" method="post" name="form1">
     </div>
             <div class="centro">
-                <br><h3 class="titulo">Login de Usuário</h3><br><br>
+                <br><h3 class="titulo">Login Administrador</h3><br><br>
                 <div class="content">
                     <p>Email: </p>
                     <input type="text" name="email">
