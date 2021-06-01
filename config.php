@@ -1,7 +1,7 @@
 <?php
 $dsn = 'mysql:dbname=icandy;host=localhost';
 $user = 'root';
-$password = '';
+$password = 'AntoBat**7';
 
 try
 {

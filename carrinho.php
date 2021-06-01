@@ -1,3 +1,6 @@
+<?php require('./login_session.php'); ?>
+<?php require('./session.php');?>
+
 <!DOCTYPE html>
 <html  lang="pt-br">
 <head>
@@ -5,8 +8,6 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge" >
         <link rel = "stylesheet" type="text/css" href="./css/carrinho.css">
-        <script type = "text/javascript" src="./js/jquery.js"></script>
-        <script type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
     <?php require('header.php')?>
@@ -14,29 +15,49 @@
         <table id="conteudo">
 			<thead>
                 <tr>
-                    <th>Qtd</th>
                     <th>Produto</th>
+                    <th>Qtd</th>
                     <th>Preco</th>
-                    <th>Total</th>
-                    <th><button class="btn-l" id="limpar"> Limpar Carrinho</button></th>
+                    <th>Subtotal</th>
+                    <th>Limpar Carrinho</th>
                 </tr>
             </thead>
+
             <tbody>
+
+                <?php 
+                    if(!empty($_SESSION["shopping_cart"])) {
+                        $total = 0;
+                        foreach($_SESSION["shopping_cart"] as $keys => $values)
+                        {
+                ?>
                 <tr>
-                    <th id="qtd" class="text"> </th>
-                    <th id="pdt" class="text"> </th>
-                    <th id="pço" class="text"> </th>
-                    <th id="total" class="text"> </th>
+                    <td id="pdt" class="text"> <?php echo $values["item_nome"]; ?> </td>
+                    <td id="qtd" class="text"><?php echo $values["item_quantidade"]; ?> </td>
+                    <td id="pço" class="text">R$<?php echo $values["item_preco"]; ?>  </td>
+                    <td id="total" class="text"> <?php echo number_format($values["item_quantidade"] * $values["item_preco"], 2);?>  </td>
+                    <td class="text"><a href="carrinho.php?action=delete&id_produto=<?php echo $values["item_id_produto"]; ?>"><span> Remover </span></a>  </td>
                 </tr>
+                <?php
+                            $total = $total + ($values["item_quantidade"] * $values["item_preco"]);
+                        }
+                ?>    
+                    
+                <tr> 
+                    <th colspan="3" align-item="right"> Total </th>
+                    <th>R$ <?php echo number_format($total, 2 ); ?> </th>
+                    <td> </td>
+                </tr>
+                <?php 
+                    }
+                ?>
             </tbody>
 	    </table>
     </div>
     <div class="pagamento">
         <article>
             <div>
-                <form action="?act=save" method="POST" name="form1" class="form-horizontal" >
                     <div class="panel panel-default">
-                        
                         <div class="titulo-cad">
                             <H1 class="titulo-cad">Pagamento Cartão</H1>
                             <input type="tel" maxlength="19" placeholder="Numero do cartão" class="input"/>
@@ -48,7 +69,7 @@
                             <br>
                             <input class="datanasc" id="bData" type="month"/>
                             <br> <br>
-                            <button class="btn-cad" > Finalizar Compra </button>
+                            <a type="submit" class="btn-cad" href="compra_sucesso.php"> Finalizar Compra </a>
                         </div>
                     </div>
             </div>

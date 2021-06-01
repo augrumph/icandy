@@ -1,0 +1,32 @@
+.sucesso{
+    background-color: white;
+}
+
+.texto{
+    color:#111111;
+    font-size: 20px;
+}
+
+#confirmacao{
+    width: 150px;
+    height: 150px;
+}
+
+.header{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centro{
+    background-color: white;
+    height: 400px;
+    width: 350px;
+    margin-top: 100px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

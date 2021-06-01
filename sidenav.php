@@ -9,7 +9,8 @@
         <a href="cadastrarFuncionario.php">CADASTRAR FUNCIONARIO</a>
         <a href="listar.php">LISTAR FUNCIONARIO</a>
         <a href="listarUser.php">LISTAR USUARIO</a>
-        <a href="#">EXIBIR PRODUTOS</a>
+        <a href="cadastrarProduto.php">CADASTRAR PRODUTO</a>
+        <a href="exibirProdutos.php">EXIBIR PRODUTOS</a>
         <a href="#">EXIBIR ADMINISTRADORES</a>
         <a href="logout.php">SAIR</a>
     </div>

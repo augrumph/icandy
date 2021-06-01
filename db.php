@@ -11,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
 } else if (!isset($id)) {
 
-    $id = (isset($_GET["id"]) && $_GET["id"] != null) ? $_GET["id"] : "";
+    $id = (isset($_GET["id"]) && $_GET["id"] != null) ? $_GET["id"] : "AntoBat**7";
 }
  
 try {
-    $conexao = new PDO("mysql:host=localhost;dbname=icandy", "root", "");
+    $conexao = new PDO("mysql:host=localhost;dbname=icandy", "root", "AntoBat**7");
     $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conexao->exec("set names utf8");
 } catch (PDOException $erro) {
