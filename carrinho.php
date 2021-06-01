@@ -69,7 +69,7 @@
                             <br>
                             <input class="datanasc" id="bData" type="month"/>
                             <br> <br>
-                            <button type="submit" class="btn-cad"> Finalizar Compra </button>
+                            <a type="submit" class="btn-cad" href="compra_sucesso.php"> Finalizar Compra </a>
                         </div>
                     </div>
             </div>
