@@ -19,7 +19,7 @@
                     <th>Qtd</th>
                     <th>Preco</th>
                     <th>Subtotal</th>
-                    <th>Limpar Carrinho</th>
+                    <th> <a href="carrinho.php?action=limpar" class="limpar"><span>Limpar Carrinho</span> </a> </th>
                 </tr>
             </thead>
 
@@ -57,21 +57,56 @@
     <div class="pagamento">
         <article>
             <div>
+                <form action="carrinho.php" method="POST" name="form1" class="form-horizontal" >
                     <div class="panel panel-default">
                         <div class="titulo-cad">
                             <H1 class="titulo-cad">Pagamento Cartão</H1>
                             <input type="tel" maxlength="19" placeholder="Numero do cartão" class="input"/>
                             <br>
                             <input class="input" type="text" placeholder="Nome"/>
-                            <input class="input" type="text" placeholder="CVV"/>
+                            <input class="input" maxlength="3" type="text" placeholder="CVV"/>
                             <br>
                             <a class="titulo-vencimento">Data de Vencimento</a>
                             <br>
                             <input class="datanasc" id="bData" type="month"/>
-                            <br> <br>
-                            <a type="submit" class="btn-cad" href="compra_sucesso.php"> Finalizar Compra </a>
+                            <br><br>
+                            <input type="hidden" name="id" value="<?php 
+                            echo (isset($id) && ($id != null || $id != "")) ? $id : '';
+                            ?>"/>
+
+                            <input type="hidden" name="nome" value="<?php echo $values["item_nome"]; ?>"/>
+
+                            <input type="hidden" name="quantidade" value="<?php echo $values["item_quantidade"]; ?>"/>
+
+                            <input type="hidden" name="preco" value="<?php echo $values["item_preco"];?>"/>
+
+                            <?php
+                            if(isset($_SESSION["email"])){
+                                $result = mysqli_query($mysqli, "SELECT id FROM users WHERE email = '".$_SESSION["email"]."'");
+                                $id_user = mysqli_fetch_array($result);
+                            }
+                            ?>
+                            <input type="hidden" name="users_id" value="<?php echo $id_user['id'];  ?>"/>
+                            <input type="submit" name="carrinho" value="Finalizar Compra" />
                         </div>
                     </div>
+                    <?php
+                    if (isset($_POST['carrinho'])) {
+                        $id = $_POST['id'];
+                        $quantidade = $_POST['quantidade'];
+                        $nome     = $_POST['nome'];
+                        $preco    = $_POST['preco'];
+                        $users_id = $_POST['users_id'];
+
+                        if(!empty($_SESSION["shopping_cart"])) {
+                            foreach($_SESSION["shopping_cart"] as $keys => $values)
+                            {
+                            $result   = mysqli_query($mysqli, "INSERT INTO nota(quantidade,nome,preco,users_id) VALUES('$quantidade','$nome','$preco','$users_id')");
+                            }
+                        }
+                    }
+                    ?>
+                <form>
             </div>
         </article>
     </div>

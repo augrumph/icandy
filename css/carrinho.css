@@ -125,3 +125,8 @@
     cursor: pointer;
     background-color: rgb(255, 80, 80);
 }
+
+.limpar{
+    text-decoration: none;
+    color:red;
+}
