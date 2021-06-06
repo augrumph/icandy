@@ -44,7 +44,7 @@
             foreach($_SESSION["shopping_cart"] as $keys => $values){
                 unset($_SESSION["shopping_cart"][$keys]);
             }
-            echo '<script>alert("Todos os produtos foram removidod")</script>';
+            echo '<script>alert("Todos os produtos foram removidos")</script>';
         }
     }
 

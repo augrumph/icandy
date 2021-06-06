@@ -130,3 +130,20 @@
     text-decoration: none;
     color:red;
 }
+
+.final{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: rgb(233, 60, 60);
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+}
+
+.redirect{
+    text-decoration: none;
+    color: white;
+}

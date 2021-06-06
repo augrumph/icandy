@@ -87,7 +87,7 @@
                             }
                             ?>
                             <input type="hidden" name="users_id" value="<?php echo $id_user['id'];  ?>"/>
-                            <input type="submit" name="carrinho" value="Finalizar Compra" />
+                            <button type="submit" name="carrinho" value="Finalizar Compra" class="final"><a class="redirect" href="compra_sucesso.php">Finalizar Compra</a></button>
                         </div>
                     </div>
                     <?php
