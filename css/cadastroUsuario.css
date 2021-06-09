@@ -8,35 +8,45 @@ body {
     align-items: center;
     justify-content: center;
 }
-.titulo{
-    margin-left: 105px;
-}
 .centro{
     background-color: white;
     height: 400px;
     width: 350px;
     margin-top: -650px;
     margin-left: 550px;
+    text-align: center;
+    border-radius: 15px;
 }
 .content{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.input {
+    height: 40px;
+    width: 270px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
 #btn{
     color: white;
     background-color: goldenrod;
     border-color: goldenrod;
-    margin-left: 165px;
     height: 25px;
+    width: 50%;
+    border-radius: 15px;
 }
 #register{
     margin-top: 150px;
     text-decoration: none;
-    margin-left: 60px;
 }
 #btn:hover{
     background-color: rgb(250, 200, 74);
+    cursor: pointer;
 }
 #register:link{
     color: black;

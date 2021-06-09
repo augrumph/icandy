@@ -1,7 +1,7 @@
 <?php
-$dsn = 'mysql:dbname=icandy;host=localhost';
+$dsn = 'mysql:dbname=icandy;host=localhost:3307';
 $user = 'root';
-$password = 'AntoBat**7';
+$password = '';
 
 try
 {

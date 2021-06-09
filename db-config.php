@@ -1,8 +1,8 @@
 <?php
 
-$databaseHost     = 'localhost';
+$databaseHost     = 'localhost:3307';
 $databaseName     = 'icandy';
 $databaseUsername = 'root';
-$databasePassword = 'AntoBat**7';
+$databasePassword = '';
 
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);

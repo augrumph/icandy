@@ -1,5 +1,5 @@
 <?php
-    $conexao = new PDO("mysql:host=localhost;dbname=icandy", "root", "AntoBat**7");
+    $conexao = new PDO("mysql:host=localhost:3307;dbname=icandy", "root", "");
     if(isset($_POST["add_carrinho"])){
         if(isset($_SESSION["shopping_cart"])){
             $item_array_id = array_column($_SESSION["shopping_cart"], "item_id_produto");
@@ -38,6 +38,13 @@
                     echo '<script>window.location="carrinho.php"</script>';
                 }
             }
+        }
+
+        if ($_GET["action"] == "limpar") {
+            foreach($_SESSION["shopping_cart"] as $keys => $values){
+                unset($_SESSION["shopping_cart"][$keys]);
+            }
+            echo '<script>alert("Todos os produtos foram removidos")</script>';
         }
     }
 

@@ -4,8 +4,6 @@
     <link rel = "stylesheet" type="text/css" href="./css/cssListar.css">
 </head>
 <body>
-    <?php require('./dbp.php'); ?>
-    
     <div class="panel-footer">
                                 
                 <div class="row">
@@ -21,6 +19,7 @@
                                 <?php
                                 
                                 try {
+                                    $conexao = new PDO("mysql:host=localhost:3307;dbname=icandy", "root", "");
                                     $stmt = $conexao->prepare("SELECT * FROM produtos");
                                     if ($stmt->execute()) {
                                         while ($rs = $stmt->fetch(PDO::FETCH_OBJ)) {
@@ -29,8 +28,6 @@
                                                 <td><?php echo $rs->nome; ?></td>
                                                 <td><?php echo $rs->preco; ?></td>
                                                 <td><center>
-                                            <button href="?act=upd&id_produto=<?php echo $rs->id_produto; ?>" class="btn-cad ">Editar</button>
-                                            <a href="?act=del&id_produto=<?php echo $rs->id_produto; ?>" > <button class="btn-cad " > Excluir </button> </a>
                                         </center>
                                         </td>
                                         </tr>

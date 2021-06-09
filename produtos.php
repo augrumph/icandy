@@ -11,8 +11,6 @@
 </head>
 <body>
     <?php include("header.php") ?>
-    <?php require('./dbp.php'); ?>
-    
         <?php 
         try {
             $stmt = $conexao->prepare("SELECT * FROM produtos");
@@ -26,8 +24,16 @@
                     <span>Quantidade: </span><input name="quantidade" type="number" value="1" min="1" max="30" id="qtd1">
                     <input type="hidden" name="hidden_nome" value="<?php echo $rs->nome; ?>"/>
                     <input type="hidden" name="hidden_preco" value="<?php echo $rs->preco; ?>"/>
-                    <p><button>Tabela Nutricional</button></p>
-                    <input type="submit" name="add_carrinho" class="botao" value="Add ao carrinho"/>
+                    <p><button onclick="abrir()"> <a href="tabela_nutricional.php" class="tabela"> Tabela Nutricional </a></button></p>
+                    <script>
+                        function abrir() {
+                            alert("Tabela nutricional!");
+                        }
+                        function addCarrinho() {
+                            alert("Produto adicionado ao carrinho!");
+                        }
+                    </script>
+                    <input type="submit" onclick="addCarrinho()" name="add_carrinho" class="botao" value="Adicionar ao carrinho"/>
                 </div>
             </form>
 

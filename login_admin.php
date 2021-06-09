@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
         $_SESSION["email"] = $email;
         header("location: sidenav.php");
     } else {
-        echo "User email or password is not matched <br/><br/>";
+        echo "<script>alert('Usuário ou senha incorretos')</script>";
     }
 }
 ?>
@@ -36,24 +36,25 @@ if (isset($_POST['login'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/cadastroUsuario.css">
-    <title>Login Usuário</title>
+    <title>Login Administrador</title>
 </head>
 <body>
+        <img src="./imgs/logo.jpeg" height="80px" width="220px">
     <div class="header">
         <form action="sidenav.php" method="post" name="form1">
     </div>
             <div class="centro">
-                <br><h3 class="titulo">Login Administrador</h3><br><br>
+                <br><br><br><h3 class="titulo">Login Administrador</h3><br>
                 <div class="content">
                     <p>Email: </p>
-                    <input type="text" name="email">
+                    <input class="input" type="text" name="email">
                 </div>
                 <div class="content">
                     <p>Senha: </p>
-                    <input type="password" name="password">
+                    <input class="input" type="password" name="password">
                 </div>
                 
-                <br><input type="submit" name="login" value="Login" id="btn"><br><br><br>
+                <br><br><br><input type="submit" name="login" value="Login" id="btn"><br><br><br>
                      
             </div>
         </form>

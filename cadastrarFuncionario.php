@@ -26,7 +26,7 @@
                                 <div class="form-group">
                                     <label for='nome' class="col-sm-1 control-label" ></label>
                                     <div class="col-md-5">
-                                        <input class="input" type="text" name='nome' placeholder="Nome" value="<?php
+                                        <input class="input" required type="text" name='nome' placeholder="Nome" value="<?php
                                         
                                         echo (isset($nome) && ($nome!= null || $nome != "")) ? $nome : '';
 
@@ -34,7 +34,7 @@
                                     </div>
                                     <label for="sobrenome" class="col-sm-1 control-label"></label>
                                     <div class="col-md-4">
-                                        <input class="input" type="text" name="sobrenome" placeholder="Sobrenome" value="<?php
+                                        <input class="input" required type="text" name="sobrenome" placeholder="Sobrenome" value="<?php
                                         
                                         echo (isset($sobrenome) && ($sobrenome != null || $sobrenome != "")) ? $sobrenome : '';
 
@@ -47,7 +47,7 @@
                                     <div class="col-md-4">
                                         
                                         <span> </span>
-                                        <input placeholder="Inicio Contrato" onfocus="(this.type='date')" class="datanasc"  name="inicio_contrato"  value="<?php
+                                        <input placeholder="Inicio Contrato" required onfocus="(this.type='date')" class="datanasc"  name="inicio_contrato"  value="<?php
                                         
                                         echo (isset($inicio_contrato) && ($inicio_contrato != null || $inicio_contrato != "")) ? $inicio_contrato : '';
 
@@ -55,7 +55,7 @@
                                     </div>
                                     <label for="genero" class="col-sm-2 control-label"></label>
                                     <div class="col-md-4">
-                                        <input class="input" type="text" name="genero" placeholder="Genero" value="<?php
+                                        <input class="input" type="text" required name="genero" placeholder="Genero" value="<?php
                                        
                                         echo (isset($genero) && ($genero != null || $genero != "")) ? $genero : '';
 
@@ -65,7 +65,7 @@
                                 <div class="form-group">
                                     <label for="salario" class="col-sm-1 control-label"></label>
                                     <div class="col-md-4">
-                                        <input class="input" type="text" name="salario" placeholder="Salario" value="<?php
+                                        <input class="input" required type="text" name="salario" placeholder="Salario" value="<?php
                                        
                                         echo (isset($salario) && ($salario != null || $salario != "")) ? $salario : '';
 
@@ -73,7 +73,7 @@
                                     </div>
                                     <label for="posicao" class="col-sm-2 control-label"></label>
                                     <div class="col-md-2">
-                                        <input class="input" type="text" name="posicao" placeholder="Cargo" value="<?php
+                                        <input class="input" required type="text" name="posicao" placeholder="Cargo" value="<?php
                                         
                                         echo (isset($posicao) && ($posicao != null || $posicao != "")) ? $posicao : '';
 

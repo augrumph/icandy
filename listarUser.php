@@ -37,7 +37,6 @@
                                                 <td><?php echo md5($rs->password); ?></td>
                                                
                                                 <td><center>
-                                                <button href="?act=upd&id=<?php echo $rs->id; ?>" class="btn-cad ">Editar</button>
                                             <a href="?act=del&id=<?php echo $rs->id; ?>" > <button class="btn-cad " > Excluir </button> </a>
                                             
                                         </center>

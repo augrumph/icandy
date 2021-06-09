@@ -54,16 +54,16 @@
 
             
             if ($user_matched > 0) {
-                echo "<br/><br/><strong>Error: </strong> User already exists with the email id '$email'.";
+                echo "<script>alert('Erro. E-mail já cadastrado')</script>";
             } else {
                 
                 $result   = mysqli_query($mysqli, "INSERT INTO users(name,email,password) VALUES('$name','$email','$password')");
 
                 
                 if ($result) {
-                    echo "<br/><br/>User Registered successfully.";
+                    echo "<script>alert('Cadastro realizado com sucesso!')</script>";
                 } else {
-                    echo "Registration error. Please try again." . mysqli_error($mysqli);
+                    echo "<script>alert('Erro. Por favor tente novamente.')</script>" . mysqli_error($mysqli);
                 }
             }
         }

@@ -1,0 +1,19 @@
+.container{
+    border: solid 2px;
+    height: 320px;
+    width: 330px;
+    text-align: center;
+    margin-left: 520px;
+}
+
+.subtitulo{
+    margin-top: -20px;
+}
+
+#baixar{
+    background-image: linear-gradient(#46326F, #54476e);
+    border-radius: 100%;
+    height: 65px;
+    width: 65px;
+    margin-left: 20px;
+}
