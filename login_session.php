@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
         $_SESSION["email"] = $email;
         header("location: menuUsuario.php");
     } else {
-        echo "User email or password is not matched <br/><br/>";
+        echo "<script>alert('Usuário ou senha incorretos')</script>";
     }
 }
 ?>

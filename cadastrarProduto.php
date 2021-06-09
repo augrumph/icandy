@@ -17,24 +17,24 @@
                             
                             <div class="titulo-cad">
                                 <H1 class="titulo-cad">Cadastrar Produto: </H1>
-                                <input class="input" name="id_produto" placeholder="Id do produto" type="text"/>
+                                <input class="input" required name="id_produto" placeholder="Código do produto" type="text"/>
                                 <div class="form-group">
                                     <label for='nome' class="col-sm-1 control-label" ></label>
                                     <div class="col-md-5">
-                                        <input class="input" type="text" name='nome' placeholder="Nome" class="form-control"/>
+                                        <input class="input" required type="text" name='nome' placeholder="Nome" class="form-control"/>
                                     </div>
                                     <label for="preco" class="col-sm-1 control-label"></label>
                                     <div class="col-md-4">
-                                        <input class="input" type="text" name="preco" placeholder="Preço" class="form-control" />
+                                        <input class="input" required type="text" name="preco" placeholder="Preço" class="form-control" />
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="imagem" class="col-sm-1 control-label"></label>
                                     <div class="col-md-4">
-                                        <input class="input" type="text" name="imagem" placeholder="Caminho da imagem" class="form-control" />
+                                        <input class="input" required type="text" name="imagem" placeholder="Caminho da imagem" class="form-control" />
                                     </div>
                                     <div class="col-md-4">
-                                        <input class="input" type="text" name="id_admin" placeholder="Id do administrador" class="form-control" />
+                                        <input class="input" required type="text" name="id_admin" placeholder="Id do administrador" class="form-control" />
                                     </div>
                                 </div>
                                 <br>

@@ -28,7 +28,6 @@
                                                 <td><?php echo $rs->nome; ?></td>
                                                 <td><?php echo $rs->preco; ?></td>
                                                 <td><center>
-                                            <a href="?act=del&id_produto=<?php echo $rs->id_produto; ?>" > <button class="btn-cad " > Excluir </button> </a>
                                         </center>
                                         </td>
                                         </tr>

@@ -61,14 +61,14 @@
                     <div class="panel panel-default">
                         <div class="titulo-cad">
                             <H1 class="titulo-cad">Pagamento Cartão</H1>
-                            <input type="tel" maxlength="19" placeholder="Numero do cartão" class="input"/>
+                            <input type="tel" required minlength="19" maxlength="19" placeholder="Numero do cartão" class="input"/>
                             <br>
-                            <input class="input" type="text" placeholder="Nome"/>
-                            <input class="input" maxlength="3" type="text" placeholder="CVV"/>
+                            <input class="input" required type="text" placeholder="Nome"/>
+                            <input class="input" required minlenght="3" maxlength="3" type="text" placeholder="CVV"/>
                             <br>
                             <a class="titulo-vencimento">Data de Vencimento</a>
                             <br>
-                            <input class="datanasc" id="bData" type="month"/>
+                            <input class="datanasc" required id="bData" type="month"/>
                             <br><br>
                             <input type="hidden" name="id" value="<?php 
                             echo (isset($id) && ($id != null || $id != "")) ? $id : '';

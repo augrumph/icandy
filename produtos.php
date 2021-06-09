@@ -29,8 +29,11 @@
                         function abrir() {
                             alert("Tabela nutricional!");
                         }
+                        function addCarrinho() {
+                            alert("Produto adicionado ao carrinho!");
+                        }
                     </script>
-                    <input type="submit" name="add_carrinho" class="botao" value="Add ao carrinho"/>
+                    <input type="submit" onclick="addCarrinho()" name="add_carrinho" class="botao" value="Adicionar ao carrinho"/>
                 </div>
             </form>
 

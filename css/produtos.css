@@ -5,116 +5,7 @@ body {
 	margin: 0 auto;
 }
 
-.header {
-    overflow: hidden;
-    padding: 20px 10px;
-}
-  
-.header-right {
-    margin-top: 7px;
-    float: right;
-}
-
-.menu{
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: Segoe UI;
-  margin-right: 50px;
-  cursor: pointer;
-}
-
-.titulo-login {
-    color: black;
-    font-size: 20px;
-    font-family: 'Segoe UI';
-    text-align: center;
-}
-
-.form-popup {
-  margin-top: 20px;
-  display: none;
-  position: fixed;
-  right: 15px;
-  z-index: 9;
-}
-
-.form-container {
-  font-family: Segoe UI;
-  color: white;
-  max-width: 400px;
-  padding: 10px;
-  background-color:white;
-  border-radius: 7px;
-}
-
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-.form-container .btn {
-  background-color: rgb(255, 0, 0);
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-
-.btn{
-  font-size: 14px;
-  border-radius: 10px;
-}
-
-.btn_fechar {
-    color: black;
-    margin-left: 130px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-}
-
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
-
-.esqueci{
-    color: rgb(248, 60, 60);
-    font-family: 'Segoe UI';
-}
-
-.esqueci:hover{
-  text-decoration: underline;
-  cursor: pointer;
-  font-style: inherit;
-}
-
-#login{
-  height: 30px;
-  width: 300px;
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid grey;
-  font-family: 'Segoe UI';
-  font-size: 15px;
-  margin-bottom: auto;
-}
-
 .form-horizontal{
-  
   display: inline-block;
   margin-left: 125px;
   margin-top: 50px;
@@ -133,6 +24,7 @@ body {
   margin-left: -40px;
   margin-top: 50px;
   padding: 20px;
+  border-radius: 15px;
 }
   
 .price {
@@ -146,15 +38,16 @@ body {
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: rgb(233, 60, 60);
+  background-color: goldenrod;
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+  border-radius: 15px;
 }
   
 .card button:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .nome_produto{
@@ -172,15 +65,16 @@ body {
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: rgb(233, 60, 60);
+  background-color: goldenrod;
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+  border-radius: 15px;
 }
 
 .botao:hover{
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .tabela{

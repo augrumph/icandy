@@ -9,22 +9,24 @@
     <title>Login Usuário</title>
 </head>
 <body>
+    <img src="imgs/logo.jpeg" height="80px" width="220px">
     <div class="header">
         <form action="login.php" method="post" name="form1">
+        
     </div>
             <div class="centro">
-                <br><h3 class="titulo">Login de Usuário</h3><br><br>
+                <br><br><h3 class="titulo">Login de Usuário</h3><br>
                 <div class="content">
                     <p>Email: </p>
-                    <input type="text" name="email">
+                    <input class="input" type="text" name="email">
                 </div>
                 <div class="content">
                     <p>Senha: </p>
-                    <input type="password" name="password">
+                    <input class="input" type="password" name="password">
                 </div>
                 
                 <br><input type="submit" name="login" value="Login" id="btn"><br><br><br>
-                <a href="register.php" id="register">Ainda não possui conta? Cadastre-se</a>        
+                <p>Ainda não possui conta?<a href="register.php" id="register"> Cadastre-se</a></p>
             </div>
         </form>
     <br>

@@ -12,12 +12,12 @@
 #conteudo td,
 #conteudo th {
   border: 0.3px solid black;
-  color: red;
+  color: goldenrod;
   padding: 8px;
 }
 
 .nomec{
-	color: red;
+	color: goldenrod;
 	font-family: 'Segoe UI';
 	font-size: 20px;
 }
@@ -38,7 +38,7 @@
 
 .btn{
     font-size: 14px;
-    background-color: rgb(248, 60, 60);
+    background-color: goldenrod;
     color:black;
     border-radius: 10px;
     width: 200px;
@@ -98,7 +98,7 @@
     font-family: "Segoe UI";
     font-size: 15px;
     color: white;
-    background-color: rgb(248, 60, 60);
+    background-color: goldenrod;
     border-radius: 15px;
     width: 200px;
     border: none;
@@ -109,26 +109,26 @@
   
 .btn-cad:hover {
     cursor: pointer;
-    background-color: rgb(255, 80, 80);
+    opacity: 0.8;
 }
 
 .btn-l {
     font-family: "Segoe UI";
     font-size: 15px;
     color: white;
-    background-color: rgb(248, 60, 60);
+    background-color: goldenrod;
     border-radius: 15px;
     border: none;
 }
 
 .btn-l:hover {
     cursor: pointer;
-    background-color: rgb(255, 80, 80);
+    opacity: 0.8;
 }
 
 .limpar{
     text-decoration: none;
-    color:red;
+    color:goldenrod;
 }
 
 .final{
@@ -136,11 +136,13 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: rgb(233, 60, 60);
+    background-color: goldenrod;
     text-align: center;
     cursor: pointer;
     width: 50%;
     font-size: 18px;
+    border-radius: 15px;
+    
 }
 
 .redirect{
